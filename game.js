@@ -1,17 +1,32 @@
-var inputBox = document.querySelector('section > input');
+var player = function(){
+   var newPlayer ={
+    name: name,
+    items: [],
+   };
+   newPlayer.pickup = function(item){
+     this.items.push(item);
+   };
+   var report = function(){
+     for(i=0; i < this.items.length; i++){
+        var inventoryHTML = querySelector('ul');
+        return inventoryHTML += this.items[i];
+     }
+};
 
-console.log( inputBox.tagName );
-console.log( inputBox.parentNode.tagName );
+var interpret = function(input){
+    var str = input.toLowerCase().trim();
+    var res = str.split(" ");
+    var a = splitInput(' ');
+    splitInput.remove(0);
+    var inventory ='';
+    for(i = 1; i < splitInput.length; i++0{
+      inventory = inventory + splitInput[i] + ' ';
+    };
+    return inventory;
+};
 
-var iNeedToSeeATherapist = document.querySelector('body > main > output > label');
-console.log( iNeedToSeeATherapist.tagname );
-console.log( iNeedToSeeATherapist.parentNode.tagName );
-
-var iNeedSeriousHelp = document.querySelector('#help');
-console.log( iNeedSeriousHelp.tagName );
-console.log( iNeedSeriousHelp.parentNode.tagName );
-
-console.log(document.getElementsByTagName('aside'));
-
-console.log(document.getElementById('inventory'));
-
+var execute = function(inventory){
+    var action = inventory[0];
+    var object = inventory[1];
+    player[action](object);
+};  
